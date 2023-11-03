@@ -1,33 +1,32 @@
+//Beden Kitle Endeksi
 
 
-let dersAdi=prompt("Ders adını giriniz")
-if(dersAdi=="matematik","Matematik"){
-let vize1=Number(prompt("1. vize notunuzu giriniz:"));
-let vize2=Number(prompt("2.vize notunuzu giriniz:"));
-let final=Number(prompt("Final notunuzu giriniz:"));
-let ortalama=(vize1*0.3)+(vize2*0.3)+(final*0.4);
-if(ortalama>=60){
-alert(dersAdi+ " Dersinden geçtiniz tebrikler "+ortalama);
-console.log(ortalama);
-}else{
-alert(dersAdi+" Dersinden kaldınız, bütlerde görüşürüz... "+ortalama );
-console.log(ortalama);    
+alert("Bu Ölçümde kullanılan değerler Acıbadem Hastanesi sitesinden alınmıştır");
+
+let kilo=Number(prompt("Kilonuzu girniz"));
+if(kilo==""){
+    alert("Kilonuzu giriniz");  
 }
-}else if(dersAdi!="matematik","Matematik"){
-prompt("Geçerli ders ismi girniz")
-if(dersAdi=="matematik","Matematik"){
-let vize1=Number(prompt("1. vize notunuzu giriniz:"));
-let vize2=Number(prompt("2.vize notunuzu giriniz:"));
-let final=Number(prompt("Final notunuzu giriniz:"));
-let ortalama=(vize1*0.3)+(vize2*0.3)+(final*0.4);
-if(ortalama>=60){
-alert(dersAdi+ " Dersinden geçtiniz tebrikler "+ortalama);
-console.log(ortalama);
-}else{
-alert(dersAdi+" Dersinden kaldınız, bütlerde görüşürüz... "+ortalama );
-console.log(ortalama); 
+let boy=Number(prompt("Boyunuzu metre cinsinden Giriniz"));
+if(boy==""){
+    alert("Boyunuzu giriniz");
 }
-}else if(dersAdi!="matematik","Matematik"){
-alert("üst üste iki defa hatalı giriş yaptınız sayfayı yenileyiniz");
+let sonuc=kilo/(boy*2);
+
+if(sonuc<18.5){
+alert("ideal Kilonun Altında");
+console.log("ideal Kilonun Altında");
 }
+else if(sonuc>=18.5 && sonuc<=24.9){
+alert("ideal Kiloda");
 }
+else if(sonuc>=25 && sonuc<=29.9){
+alert("ideal Kikonun Üstünde");
+}
+else if(sonuc>=30 && sonuc<=39.9){
+alert("ideal Kilonun Çok Üstünde(obez)");
+}
+else if(sonuc>=40){
+    alert("ideal Kilonun Çok Üstünde( morbidobez)");
+}
+
